@@ -19,6 +19,9 @@ class EmployeeDetailViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var officePhoneLabel: UILabel!
     @IBOutlet weak var cellPhoneLabel: UILabel! 
+    @IBOutlet weak var ipadSerialLabel: UILabel!
+    @IBOutlet weak var ipadPhoneLabel: UILabel!
+    @IBOutlet weak var portNumberLabel: UILabel!
     
     var selectedEmployee : Employee? {
         didSet {
@@ -40,6 +43,10 @@ class EmployeeDetailViewController: UIViewController {
         nameLabel.text = employeeInfo?.name
         emailLabel.text = employeeInfo?.email
         officePhoneLabel.text = employeeInfo?.phone
+        cellPhoneLabel.text = employeeInfo?.cellPhone
+        ipadPhoneLabel.text = employeeInfo?.ipadPhoneNumber
+        ipadSerialLabel.text = employeeInfo?.ipadSerial
+        //portNumberLabel.text = employeeInfo?.portNumber as! String
         readEmployeeType()
     }
     

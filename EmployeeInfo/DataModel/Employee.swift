@@ -13,6 +13,10 @@ class Employee: Object {
     @objc dynamic var name: String = ""
     @objc dynamic var email: String = ""
     @objc dynamic var phone: String = ""
+    @objc dynamic var cellPhone: String = ""
+    @objc dynamic var portNumber: Int = 0
+    @objc dynamic var ipadSerial: String = ""
+    @objc dynamic var ipadPhoneNumber: String = ""
     @objc dynamic var category: Int = 0
     
     @objc dynamic var employee: Employee!

@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 import PhoneNumberKit
 
-class EmployeeEditViewController: UIViewController {
+class EmployeeEditViewController: UIViewController, UITextFieldDelegate {
     let realm = try! Realm()
     
     @IBOutlet weak var categorySegments: UISegmentedControl!
@@ -18,6 +18,9 @@ class EmployeeEditViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var officePhoneField: PhoneNumberTextField!
     @IBOutlet weak var cellPhoneField: UITextField!
+    @IBOutlet weak var ipadSerialField: UITextField!
+    @IBOutlet weak var ipadPhoneField: UITextField!
+    @IBOutlet weak var portNumberField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
 
     let phoneNumberKit = PhoneNumberKit()
@@ -25,6 +28,7 @@ class EmployeeEditViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        portNumberField.delegate = self
         fillFields()
     }
     
@@ -45,6 +49,10 @@ class EmployeeEditViewController: UIViewController {
         emailField.text = selectedEmployee?.email
         officePhoneField.text = selectedEmployee?.phone
         categorySegments.selectedSegmentIndex = employee?.category as! Int
+        cellPhoneField.text = selectedEmployee?.cellPhone
+        ipadPhoneField.text = selectedEmployee?.ipadPhoneNumber
+        ipadSerialField.text = selectedEmployee?.ipadSerial
+        //portNumberField.text = selectedEmployee?.portNumber as? String
     }
     
     func phoneNumber() {
@@ -58,6 +66,15 @@ class EmployeeEditViewController: UIViewController {
         
     }
     
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        if textField == portNumberField {
+//            let allowedCharacters = "1234567890"
+//            let allowedCharacterSet = CharacterSet(charactersIn: allowedCharacters)
+//            let typedCharacterSet = CharacterSet(charactersIn: string)
+//            let alphabet = allowedCharacterSet.isSuperset(of: typedCharacterSet)
+//            return alphabet
+//        }
+//    }
     
     func updateEmployee() {
         let realm = try! Realm()
@@ -68,6 +85,10 @@ class EmployeeEditViewController: UIViewController {
                 employee?.email = emailField.text!
                 employee?.phone = officePhoneField.text!
                 employee?.category = categorySegments.selectedSegmentIndex
+                employee?.cellPhone = cellPhoneField.text!
+                employee?.ipadPhoneNumber = ipadPhoneField.text!
+                employee?.ipadSerial = ipadSerialField.text!
+                
             }
             
         } catch {

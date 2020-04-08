@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -45,7 +44,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WJY-wQ-E84" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="683" y="705"/>
+            <point key="canvasLocation" x="748" y="704"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yRJ-jE-kpD">
@@ -62,7 +61,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ig1-2M-3dO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-238" y="705"/>
+            <point key="canvasLocation" x="-67" y="704"/>
         </scene>
         <!--Employee Detail View Controller-->
         <scene sceneID="ig2-60-DaU">
@@ -73,7 +72,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="rpW-LW-T3h">
-                                <rect key="frame" x="20" y="100" width="374" height="166"/>
+                                <rect key="frame" x="20" y="100" width="374" height="248.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dc1-1r-49S">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
@@ -97,7 +96,7 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="jBW-iA-K9I">
-                                        <rect key="frame" x="0.0" y="63" width="374" height="103"/>
+                                        <rect key="frame" x="0.0" y="63" width="374" height="185.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="ms6-o8-Gab">
                                                 <rect key="frame" x="0.0" y="0.0" width="165" height="20.5"/>
@@ -167,11 +166,63 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Kj9-TX-TNn">
+                                                <rect key="frame" x="0.0" y="110" width="238" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPad Serial Number:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xj-su-BOg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="151" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ipadSerial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHv-El-Tje">
+                                                        <rect key="frame" x="158" y="0.0" width="80" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="kS7-3y-opt">
+                                                <rect key="frame" x="0.0" y="137.5" width="249.5" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPad Phone Number:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuT-su-rRK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="157" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ipadPhone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyn-e4-IGf">
+                                                        <rect key="frame" x="164" y="0.0" width="85.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="jc1-JR-Mkd">
+                                                <rect key="frame" x="0.0" y="165" width="251.5" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Port Number:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPA-TO-bsh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="103" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="portNumberLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ff-nq-7Px">
+                                                        <rect key="frame" x="110" y="0.0" width="141.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Dc1-1r-49S" firstAttribute="top" secondItem="rpW-LW-T3h" secondAttribute="top" id="dEA-qs-7Rg"/>
+                                    <constraint firstItem="jBW-iA-K9I" firstAttribute="leading" secondItem="rpW-LW-T3h" secondAttribute="leading" id="rqZ-8j-v7l"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -195,8 +246,11 @@
                         <outlet property="cellPhoneLabel" destination="fCU-GS-To6" id="pMN-v9-RJm"/>
                         <outlet property="emailLabel" destination="R5s-yb-bly" id="jm4-Mq-jjK"/>
                         <outlet property="employeeType" destination="uu1-Hb-ep3" id="fRE-c5-RDR"/>
+                        <outlet property="ipadPhoneLabel" destination="hyn-e4-IGf" id="H1B-EN-dyn"/>
+                        <outlet property="ipadSerialLabel" destination="jHv-El-Tje" id="yxG-nW-lSs"/>
                         <outlet property="nameLabel" destination="wBU-Bu-u1L" id="7Wg-ky-UHD"/>
                         <outlet property="officePhoneLabel" destination="Zhn-Wh-Xg8" id="Ecx-bg-4hK"/>
+                        <outlet property="portNumberLabel" destination="9Ff-nq-7Px" id="dmk-yZ-2em"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ll-Cw-gdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -228,8 +282,8 @@
                                     <segue destination="rk3-Xi-3QV" kind="unwind" unwindAction="didUnwindFromEdit:" id="riq-ql-oWm"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ste-AX-V7D">
-                                <rect key="frame" x="24" y="112" width="366" height="202"/>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ste-AX-V7D">
+                                <rect key="frame" x="24" y="112" width="366" height="377"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jwd-Fu-9h5">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="35"/>
@@ -240,7 +294,7 @@
                                         </segments>
                                     </segmentedControl>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7di-oL-RQf">
-                                        <rect key="frame" x="0.0" y="42" width="366" height="34"/>
+                                        <rect key="frame" x="0.0" y="49" width="366" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -249,17 +303,32 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nJQ-Sz-wnq">
-                                        <rect key="frame" x="0.0" y="84" width="366" height="34"/>
+                                        <rect key="frame" x="0.0" y="98" width="366" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Office Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bcT-xc-IYd">
-                                        <rect key="frame" x="0.0" y="126" width="366" height="34"/>
+                                        <rect key="frame" x="0.0" y="147" width="366" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cell Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="taE-is-uk2">
-                                        <rect key="frame" x="0.0" y="168" width="366" height="34"/>
+                                        <rect key="frame" x="0.0" y="196" width="366" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="iPad Serial Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y7b-Mh-gNI">
+                                        <rect key="frame" x="0.0" y="245" width="366" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="iPad Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gmu-J6-fLJ">
+                                        <rect key="frame" x="0.0" y="294" width="366" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Port Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YLe-bb-dml">
+                                        <rect key="frame" x="0.0" y="343" width="366" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -279,15 +348,18 @@
                         <outlet property="categorySegments" destination="jwd-Fu-9h5" id="mSR-0c-sYD"/>
                         <outlet property="cellPhoneField" destination="taE-is-uk2" id="R6X-D7-qg5"/>
                         <outlet property="emailField" destination="nJQ-Sz-wnq" id="Rkg-yV-yRo"/>
+                        <outlet property="ipadPhoneField" destination="gmu-J6-fLJ" id="sip-yh-uPG"/>
+                        <outlet property="ipadSerialField" destination="y7b-Mh-gNI" id="qK8-Sh-mgi"/>
                         <outlet property="nameField" destination="7di-oL-RQf" id="LVx-sn-B8L"/>
                         <outlet property="officePhoneField" destination="bcT-xc-IYd" id="tMP-Ja-us6"/>
+                        <outlet property="portNumberField" destination="YLe-bb-dml" id="VuK-V7-yuB"/>
                         <outlet property="saveButton" destination="blf-sB-bpw" id="m1o-rv-nPX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IjS-OU-gGA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="rk3-Xi-3QV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1538" y="1418"/>
+            <point key="canvasLocation" x="1537.68115942029" y="1417.6339285714284"/>
         </scene>
     </scenes>
 </document>
