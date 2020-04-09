@@ -57,6 +57,16 @@ class EmployeeListViewController: UITableViewController {
         }
         
         cell.textLabel?.text = employee?.name
+        switch employee?.category {
+        case 0:
+            cell.detailTextLabel?.text = "Attorney"
+        case 1:
+            cell.detailTextLabel?.text = "Investigator"
+        case 2:
+            cell.detailTextLabel?.text = "Support"
+        default:
+            cell.detailTextLabel?.text = ""
+        }
 //        if let employee = employeeItems?[indexPath.row] {
 //            cell.textLabel?.text = employee.name
 //

@@ -12,6 +12,8 @@ import PhoneNumberKit
 
 class EmployeeEditViewController: UIViewController, UITextFieldDelegate {
     let realm = try! Realm()
+
+    var inField = false
     
     @IBOutlet weak var categorySegments: UISegmentedControl!
     @IBOutlet weak var nameField: UITextField!
@@ -28,7 +30,8 @@ class EmployeeEditViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        portNumberField.delegate = self
+        initializeTextFields()
+        
         fillFields()
     }
     
@@ -42,6 +45,27 @@ class EmployeeEditViewController: UIViewController, UITextFieldDelegate {
     
     func loadEmployeeFields() {
         employee = selectedEmployee
+    }
+    
+    func initializeTextFields() {
+        nameField.delegate = self
+        nameField.keyboardType = UIKeyboardType.alphabet
+        
+        emailField.delegate = self
+        emailField.keyboardType = UIKeyboardType.emailAddress
+        
+        officePhoneField.delegate = self
+        officePhoneField.keyboardType = UIKeyboardType.phonePad
+        
+        cellPhoneField.delegate = self
+        cellPhoneField.keyboardType = UIKeyboardType.phonePad
+        
+        ipadSerialField.delegate = self
+        
+        ipadPhoneField.delegate = self
+        ipadPhoneField.keyboardType = UIKeyboardType.phonePad
+        
+        portNumberField.delegate = self
     }
     
     func fillFields() {
@@ -66,6 +90,8 @@ class EmployeeEditViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    
+    
 //    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 //        if textField == portNumberField {
 //            let allowedCharacters = "1234567890"
@@ -75,6 +101,18 @@ class EmployeeEditViewController: UIViewController, UITextFieldDelegate {
 //            return alphabet
 //        }
 //    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let nextTag = textField.tag + 1
+        
+        if let nextResponder = textField.superview?.viewWithTag(nextTag) {
+            nextResponder.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        
+        return true
+    }
     
     func updateEmployee() {
         let realm = try! Realm()
